@@ -96,3 +96,6 @@ npm start
 
 - **Admin:** admin@test.com / admin123
 - **User:** user@test.com / user123
+
+## Demo Video
+https://drive.google.com/file/d/16AAk9x9igILaXYhR_DN7TJrR8wM_pLKI/view?usp=sharing
