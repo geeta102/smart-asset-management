@@ -13,19 +13,20 @@ A full-stack web application for managing shared organizational assets with book
 ## Features
 
 ### Mandatory Features
-- ✅ User Authentication (Register/Login with JWT)
-- ✅ Role-Based Access Control (Admin / User)
-- ✅ Inventory Management (Add, Edit, Delete, Categorize Assets)
-- ✅ Asset Discovery and Booking (Search, Filter, Book with date range)
-- ✅ Approval Workflow (Admin can Approve/Reject booking requests)
-- ✅ Asset Issue and Return Management
-- ✅ Analytics Dashboard (Bar Chart, Pie Chart, Summary Cards)
-- ✅ Borrowing History (Users can track their bookings)
+- User Authentication (Register/Login with JWT)
+- Role-Based Access Control (Admin / User)
+- Inventory Management (Add, Edit, Delete, Categorize Assets)
+- Asset Discovery and Booking (Search, Filter, Book with date range)
+- Approval Workflow (Admin can Approve/Reject booking requests)
+- Asset Issue and Return Management
+- Analytics Dashboard (Bar Chart, Pie Chart, Summary Cards)
+- Borrowing History (Users can track their bookings)
 
 ### Bonus Features
-- ✅ Audit Logs (Every action is logged in database)
+- Audit Logs (Every action is logged in database)
 
 ## Project Structure
+```
 smart-asset-management/
 ├── backend/
 │   ├── prisma/
@@ -42,6 +43,7 @@ smart-asset-management/
 ├── components/        # Reusable components
 ├── context/           # Auth context
 └── api.js             # API calls
+````
 
 ## Database Schema
 
@@ -72,6 +74,7 @@ npm start
 ```
 
 ## API Overview
+```
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -85,6 +88,8 @@ npm start
 | GET | /api/bookings/my | Get my bookings |
 | PUT | /api/bookings/:id/status | Approve/Reject (Admin) |
 | PUT | /api/bookings/:id/return | Return asset |
+
+```
 
 ## Running the Application
 
