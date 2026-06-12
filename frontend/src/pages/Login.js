@@ -60,18 +60,24 @@ function Login() {
 
 const styles = {
   container: { minHeight: '100vh', display: 'flex', alignItems: 'center',
-    justifyContent: 'center', backgroundColor: '#f1f5f9' },
-  card: { backgroundColor: 'white', padding: '40px', borderRadius: '12px',
-    boxShadow: '0 4px 20px rgba(0,0,0,0.1)', width: '100%', maxWidth: '400px' },
-  title: { textAlign: 'center', color: '#1e293b', marginBottom: '4px' },
-  subtitle: { textAlign: 'center', color: '#64748b', marginBottom: '24px', fontWeight: 'normal' },
-  input: { width: '100%', padding: '12px', marginBottom: '16px', border: '1px solid #e2e8f0',
-    borderRadius: '8px', fontSize: '14px', boxSizing: 'border-box' },
-  btn: { width: '100%', padding: '12px', backgroundColor: '#3b82f6', color: 'white',
-    border: 'none', borderRadius: '8px', fontSize: '16px', cursor: 'pointer' },
-  error: { backgroundColor: '#fee2e2', color: '#dc2626', padding: '10px',
-    borderRadius: '8px', marginBottom: '16px', fontSize: '14px' },
-  link: { textAlign: 'center', marginTop: '16px', fontSize: '14px', color: '#64748b' }
+    justifyContent: 'center', backgroundColor: '#f4f1ea', padding: '32px',
+    fontFamily: 'Inter, Segoe UI, Arial, sans-serif' },
+  card: { backgroundColor: '#fffdf8', padding: '44px', borderRadius: '10px',
+    boxShadow: '0 18px 50px rgba(17,24,39,0.10)', width: '100%', maxWidth: '420px',
+    border: '1px solid #e7dfd2' },
+  title: { textAlign: 'center', color: '#1f2937', marginBottom: '6px', fontSize: '28px',
+    fontWeight: '700', letterSpacing: '0.2px' },
+  subtitle: { textAlign: 'center', color: '#6b7280', marginBottom: '28px', fontWeight: '500',
+    fontSize: '16px' },
+  input: { width: '100%', padding: '13px 14px', marginBottom: '14px', border: '1px solid #d8d2c7',
+    borderRadius: '7px', fontSize: '14px', boxSizing: 'border-box', backgroundColor: '#fffaf0',
+    color: '#111827', outlineColor: '#0f766e' },
+  btn: { width: '100%', padding: '13px', backgroundColor: '#0f766e', color: 'white',
+    border: '1px solid #0b5f59', borderRadius: '7px', fontSize: '15px', cursor: 'pointer',
+    fontWeight: '700' },
+  error: { backgroundColor: '#fff1f2', color: '#be123c', padding: '11px 12px',
+    borderRadius: '7px', marginBottom: '16px', fontSize: '14px', border: '1px solid #fecdd3' },
+  link: { textAlign: 'center', marginTop: '18px', fontSize: '14px', color: '#6b7280' }
 }
 
 export default Login

@@ -106,8 +106,8 @@ function Assets() {
           <div key={asset.id} style={styles.card}>
             <div style={styles.cardHeader}>
               <span style={styles.category}>{asset.category}</span>
-              <span style={{ ...styles.badge, backgroundColor: asset.available > 0 ? '#dcfce7' : '#fee2e2',
-                color: asset.available > 0 ? '#16a34a' : '#dc2626' }}>
+              <span style={{ ...styles.badge, backgroundColor: asset.available > 0 ? '#ecfdf5' : '#fff1f2',
+                color: asset.available > 0 ? '#047857' : '#be123c' }}>
                 {asset.available > 0 ? 'Available' : 'Unavailable'}
               </span>
             </div>
@@ -160,28 +160,40 @@ function Assets() {
 }
 
 const styles = {
-  container: { padding: '24px', backgroundColor: '#f8fafc', minHeight: '100vh' },
-  header: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' },
-  heading: { fontSize: '24px', color: '#1e293b', margin: 0 },
-  grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '16px' },
-  card: { backgroundColor: 'white', padding: '20px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' },
-  cardHeader: { display: 'flex', justifyContent: 'space-between', marginBottom: '8px' },
-  category: { fontSize: '12px', color: '#6366f1', fontWeight: '600', textTransform: 'uppercase' },
-  badge: { fontSize: '12px', padding: '2px 8px', borderRadius: '12px', fontWeight: '500' },
-  assetName: { fontSize: '18px', color: '#1e293b', margin: '0 0 8px 0' },
-  desc: { fontSize: '14px', color: '#64748b', marginBottom: '8px' },
-  quantity: { fontSize: '14px', color: '#64748b', marginBottom: '12px' },
-  cardActions: { display: 'flex', gap: '8px' },
-  formCard: { backgroundColor: 'white', padding: '20px', borderRadius: '12px', marginBottom: '16px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' },
+  container: { padding: '28px 32px', backgroundColor: '#f4f1ea', minHeight: '100vh',
+    fontFamily: 'Inter, Segoe UI, Arial, sans-serif' },
+  header: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '26px',
+    gap: '16px', flexWrap: 'wrap' },
+  heading: { fontSize: '26px', color: '#1f2937', margin: 0, fontWeight: '700' },
+  grid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '18px' },
+  card: { backgroundColor: '#fffdf8', padding: '22px', borderRadius: '8px',
+    boxShadow: '0 10px 28px rgba(17,24,39,0.07)', border: '1px solid #e7dfd2' },
+  cardHeader: { display: 'flex', justifyContent: 'space-between', marginBottom: '12px', gap: '12px' },
+  category: { fontSize: '12px', color: '#0f766e', fontWeight: '800', textTransform: 'uppercase' },
+  badge: { fontSize: '12px', padding: '4px 9px', borderRadius: '999px', fontWeight: '700',
+    border: '1px solid rgba(17,24,39,0.06)' },
+  assetName: { fontSize: '18px', color: '#111827', margin: '0 0 8px 0', fontWeight: '700' },
+  desc: { fontSize: '14px', color: '#6b7280', marginBottom: '10px', lineHeight: 1.5 },
+  quantity: { fontSize: '14px', color: '#4b5563', marginBottom: '14px' },
+  cardActions: { display: 'flex', gap: '10px', flexWrap: 'wrap' },
+  formCard: { backgroundColor: '#fffdf8', padding: '22px', borderRadius: '8px', marginBottom: '18px',
+    boxShadow: '0 10px 28px rgba(17,24,39,0.07)', border: '1px solid #e7dfd2' },
   formGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px', marginBottom: '12px' },
-  input: { width: '100%', padding: '10px', border: '1px solid #e2e8f0', borderRadius: '8px', fontSize: '14px', boxSizing: 'border-box', marginBottom: '8px' },
-  label: { fontSize: '13px', color: '#64748b', marginBottom: '4px', display: 'block' },
-  btnPrimary: { backgroundColor: '#3b82f6', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontSize: '14px' },
-  btnDanger: { backgroundColor: '#ef4444', color: 'white', border: 'none', padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontSize: '14px' },
-  btnSecondary: { backgroundColor: '#e2e8f0', color: '#1e293b', border: 'none', padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontSize: '14px' },
-  message: { backgroundColor: '#dcfce7', color: '#16a34a', padding: '12px', borderRadius: '8px', marginBottom: '16px', cursor: 'pointer' },
-  overlay: { position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000 },
-  modal: { backgroundColor: 'white', padding: '32px', borderRadius: '12px', width: '100%', maxWidth: '400px' }
+  input: { width: '100%', padding: '11px 12px', border: '1px solid #d8d2c7', borderRadius: '7px',
+    fontSize: '14px', boxSizing: 'border-box', marginBottom: '10px', backgroundColor: '#fffaf0',
+    color: '#111827', outlineColor: '#0f766e' },
+  label: { fontSize: '13px', color: '#6b7280', marginBottom: '5px', display: 'block', fontWeight: '600' },
+  btnPrimary: { backgroundColor: '#0f766e', color: 'white', border: '1px solid #0b5f59',
+    padding: '9px 16px', borderRadius: '7px', cursor: 'pointer', fontSize: '14px', fontWeight: '700' },
+  btnDanger: { backgroundColor: '#b91c1c', color: 'white', border: '1px solid #991b1b',
+    padding: '9px 16px', borderRadius: '7px', cursor: 'pointer', fontSize: '14px', fontWeight: '700' },
+  btnSecondary: { backgroundColor: '#ebe4d8', color: '#1f2937', border: '1px solid #d8d2c7',
+    padding: '9px 16px', borderRadius: '7px', cursor: 'pointer', fontSize: '14px', fontWeight: '700' },
+  message: { backgroundColor: '#ecfdf5', color: '#047857', padding: '12px 14px', borderRadius: '7px',
+    marginBottom: '18px', cursor: 'pointer', border: '1px solid #a7f3d0', fontWeight: '600' },
+  overlay: { position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(17,24,39,0.56)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: '24px' },
+  modal: { backgroundColor: '#fffdf8', padding: '32px', borderRadius: '8px', width: '100%',
+    maxWidth: '420px', border: '1px solid #e7dfd2', boxShadow: '0 24px 70px rgba(17,24,39,0.24)' }
 }
 
 export default Assets

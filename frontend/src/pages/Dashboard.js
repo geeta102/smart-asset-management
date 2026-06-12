@@ -47,7 +47,7 @@ function Dashboard() {
     { name: 'Returned', value: bookings.filter(b => b.status === 'RETURNED').length },
   ].filter(d => d.value > 0)
 
-  const COLORS = ['#f59e0b', '#10b981', '#ef4444', '#6366f1']
+  const COLORS = ['#d97706', '#0f766e', '#b91c1c', '#4f46e5']
 
   return (
     <div style={styles.container}>
@@ -55,19 +55,19 @@ function Dashboard() {
 
       {/* Summary Cards */}
       <div style={styles.cardGrid}>
-        <div style={{ ...styles.card, borderLeft: '4px solid #3b82f6' }}>
+        <div style={{ ...styles.card, borderLeft: '4px solid #0f766e' }}>
           <div style={styles.cardNum}>{totalAssets}</div>
           <div style={styles.cardLabel}>Total Assets</div>
         </div>
-        <div style={{ ...styles.card, borderLeft: '4px solid #10b981' }}>
+        <div style={{ ...styles.card, borderLeft: '4px solid #15803d' }}>
           <div style={styles.cardNum}>{availableAssets}</div>
           <div style={styles.cardLabel}>Available Assets</div>
         </div>
-        <div style={{ ...styles.card, borderLeft: '4px solid #f59e0b' }}>
+        <div style={{ ...styles.card, borderLeft: '4px solid #d97706' }}>
           <div style={styles.cardNum}>{pendingBookings}</div>
           <div style={styles.cardLabel}>Pending Bookings</div>
         </div>
-        <div style={{ ...styles.card, borderLeft: '4px solid #6366f1' }}>
+        <div style={{ ...styles.card, borderLeft: '4px solid #4f46e5' }}>
           <div style={styles.cardNum}>{approvedBookings}</div>
           <div style={styles.cardLabel}>Approved Bookings</div>
         </div>
@@ -82,7 +82,7 @@ function Dashboard() {
               <XAxis dataKey="name" />
               <YAxis />
               <Tooltip />
-              <Bar dataKey="count" fill="#3b82f6" />
+              <Bar dataKey="count" fill="#0f766e" />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -111,19 +111,21 @@ function Dashboard() {
 }
 
 const styles = {
-  container: { padding: '24px', backgroundColor: '#f8fafc', minHeight: '100vh' },
-  heading: { fontSize: '24px', color: '#1e293b', marginBottom: '24px' },
+  container: { padding: '28px 32px', backgroundColor: '#f4f1ea', minHeight: '100vh',
+    fontFamily: 'Inter, Segoe UI, Arial, sans-serif' },
+  heading: { fontSize: '26px', color: '#1f2937', marginBottom: '26px', fontWeight: '700' },
   cardGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-    gap: '16px', marginBottom: '24px' },
-  card: { backgroundColor: 'white', padding: '20px', borderRadius: '12px',
-    boxShadow: '0 2px 8px rgba(0,0,0,0.08)' },
-  cardNum: { fontSize: '32px', fontWeight: 'bold', color: '#1e293b' },
-  cardLabel: { fontSize: '14px', color: '#64748b', marginTop: '4px' },
+    gap: '18px', marginBottom: '26px' },
+  card: { backgroundColor: '#fffdf8', padding: '22px', borderRadius: '8px',
+    boxShadow: '0 10px 28px rgba(17,24,39,0.07)', border: '1px solid #e7dfd2' },
+  cardNum: { fontSize: '34px', fontWeight: '800', color: '#111827' },
+  cardLabel: { fontSize: '13px', color: '#6b7280', marginTop: '6px', fontWeight: '600',
+    textTransform: 'uppercase' },
   chartGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-    gap: '16px' },
-  chartCard: { backgroundColor: 'white', padding: '20px', borderRadius: '12px',
-    boxShadow: '0 2px 8px rgba(0,0,0,0.08)' },
-  chartTitle: { fontSize: '16px', color: '#1e293b', marginBottom: '12px' }
+    gap: '18px' },
+  chartCard: { backgroundColor: '#fffdf8', padding: '22px', borderRadius: '8px',
+    boxShadow: '0 10px 28px rgba(17,24,39,0.07)', border: '1px solid #e7dfd2' },
+  chartTitle: { fontSize: '16px', color: '#1f2937', marginBottom: '14px', fontWeight: '700' }
 }
 
 export default Dashboard

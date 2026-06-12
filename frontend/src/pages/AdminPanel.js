@@ -27,10 +27,10 @@ function AdminPanel() {
 
   const getStatusStyle = (status) => {
     const map = {
-      PENDING: { backgroundColor: '#fef9c3', color: '#854d0e' },
-      APPROVED: { backgroundColor: '#dcfce7', color: '#166534' },
-      REJECTED: { backgroundColor: '#fee2e2', color: '#991b1b' },
-      RETURNED: { backgroundColor: '#e0f2fe', color: '#075985' },
+      PENDING: { backgroundColor: '#fffbeb', color: '#92400e' },
+      APPROVED: { backgroundColor: '#ecfdf5', color: '#047857' },
+      REJECTED: { backgroundColor: '#fff1f2', color: '#be123c' },
+      RETURNED: { backgroundColor: '#eef2ff', color: '#4338ca' },
     }
     return map[status] || {}
   }
@@ -125,27 +125,38 @@ function AdminPanel() {
 }
 
 const styles = {
-  container: { padding: '24px', backgroundColor: '#f8fafc', minHeight: '100vh' },
-  heading: { fontSize: '24px', color: '#1e293b', marginBottom: '24px' },
-  message: { backgroundColor: '#dcfce7', color: '#16a34a', padding: '12px', borderRadius: '8px', marginBottom: '16px', cursor: 'pointer' },
-  cardGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '16px', marginBottom: '24px' },
-  card: { backgroundColor: 'white', padding: '20px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', cursor: 'pointer', textAlign: 'center' },
-  cardNum: { fontSize: '32px', fontWeight: 'bold', color: '#1e293b' },
-  cardLabel: { fontSize: '13px', color: '#64748b', marginTop: '4px' },
-  tabs: { display: 'flex', gap: '8px', marginBottom: '16px', flexWrap: 'wrap' },
-  tab: { padding: '8px 16px', border: '1px solid #e2e8f0', borderRadius: '8px', cursor: 'pointer', backgroundColor: 'white', fontSize: '13px', color: '#64748b' },
-  activeTab: { backgroundColor: '#3b82f6', color: 'white', border: '1px solid #3b82f6' },
-  empty: { backgroundColor: 'white', padding: '40px', borderRadius: '12px', textAlign: 'center', color: '#64748b' },
-  tableWrapper: { backgroundColor: 'white', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', overflow: 'auto' },
+  container: { padding: '28px 32px', backgroundColor: '#f4f1ea', minHeight: '100vh',
+    fontFamily: 'Inter, Segoe UI, Arial, sans-serif' },
+  heading: { fontSize: '26px', color: '#1f2937', marginBottom: '26px', fontWeight: '700' },
+  message: { backgroundColor: '#ecfdf5', color: '#047857', padding: '12px 14px', borderRadius: '7px',
+    marginBottom: '18px', cursor: 'pointer', border: '1px solid #a7f3d0', fontWeight: '600' },
+  cardGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '18px', marginBottom: '26px' },
+  card: { backgroundColor: '#fffdf8', padding: '22px', borderRadius: '8px',
+    boxShadow: '0 10px 28px rgba(17,24,39,0.07)', cursor: 'pointer', textAlign: 'center',
+    border: '1px solid #e7dfd2' },
+  cardNum: { fontSize: '34px', fontWeight: '800', color: '#111827' },
+  cardLabel: { fontSize: '12px', color: '#6b7280', marginTop: '6px', fontWeight: '800',
+    textTransform: 'uppercase' },
+  tabs: { display: 'flex', gap: '10px', marginBottom: '18px', flexWrap: 'wrap' },
+  tab: { padding: '9px 16px', border: '1px solid #d8d2c7', borderRadius: '999px', cursor: 'pointer',
+    backgroundColor: '#fffdf8', fontSize: '13px', color: '#4b5563', fontWeight: '700' },
+  activeTab: { backgroundColor: '#0f766e', color: 'white', border: '1px solid #0b5f59' },
+  empty: { backgroundColor: '#fffdf8', padding: '42px', borderRadius: '8px', textAlign: 'center',
+    color: '#6b7280', border: '1px solid #e7dfd2', boxShadow: '0 10px 28px rgba(17,24,39,0.07)' },
+  tableWrapper: { backgroundColor: '#fffdf8', borderRadius: '8px', boxShadow: '0 10px 28px rgba(17,24,39,0.07)', overflow: 'auto', border: '1px solid #e7dfd2' },
   table: { width: '100%', borderCollapse: 'collapse' },
-  thead: { backgroundColor: '#f1f5f9' },
-  th: { padding: '12px 16px', textAlign: 'left', fontSize: '13px', color: '#64748b', fontWeight: '600' },
-  tr: { borderBottom: '1px solid #f1f5f9' },
-  td: { padding: '12px 16px', fontSize: '14px', color: '#1e293b' },
-  email: { fontSize: '12px', color: '#94a3b8' },
-  badge: { padding: '4px 10px', borderRadius: '12px', fontSize: '12px', fontWeight: '600' },
-  btnApprove: { backgroundColor: '#10b981', color: 'white', border: 'none', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '13px' },
-  btnReject: { backgroundColor: '#ef4444', color: 'white', border: 'none', padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '13px' }
+  thead: { backgroundColor: '#ebe4d8' },
+  th: { padding: '13px 16px', textAlign: 'left', fontSize: '12px', color: '#4b5563', fontWeight: '800',
+    textTransform: 'uppercase' },
+  tr: { borderBottom: '1px solid #eee7dc' },
+  td: { padding: '14px 16px', fontSize: '14px', color: '#1f2937' },
+  email: { fontSize: '12px', color: '#6b7280', marginTop: '3px' },
+  badge: { padding: '4px 10px', borderRadius: '999px', fontSize: '12px', fontWeight: '800',
+    border: '1px solid rgba(17,24,39,0.06)' },
+  btnApprove: { backgroundColor: '#0f766e', color: 'white', border: '1px solid #0b5f59',
+    padding: '7px 12px', borderRadius: '7px', cursor: 'pointer', fontSize: '13px', fontWeight: '700' },
+  btnReject: { backgroundColor: '#b91c1c', color: 'white', border: '1px solid #991b1b',
+    padding: '7px 12px', borderRadius: '7px', cursor: 'pointer', fontSize: '13px', fontWeight: '700' }
 }
 
 export default AdminPanel

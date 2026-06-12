@@ -30,13 +30,15 @@ function Navbar() {
 
 const styles = {
   nav: { display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-    padding: '12px 24px', backgroundColor: '#1e293b', color: 'white' },
-  brand: { fontSize: '20px', fontWeight: 'bold', color: '#60a5fa' },
-  links: { display: 'flex', gap: '16px', alignItems: 'center' },
-  link: { color: '#cbd5e1', textDecoration: 'none', fontSize: '14px' },
-  user: { color: '#94a3b8', fontSize: '14px' },
-  btn: { backgroundColor: '#ef4444', color: 'white', border: 'none',
-    padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '14px' }
+    padding: '14px 32px', backgroundColor: '#111827', color: '#f9fafb',
+    borderBottom: '1px solid rgba(255,255,255,0.08)', fontFamily: 'Inter, Segoe UI, Arial, sans-serif',
+    flexWrap: 'wrap', gap: '14px' },
+  brand: { fontSize: '19px', fontWeight: '700', color: '#f9fafb', letterSpacing: '0.2px' },
+  links: { display: 'flex', gap: '18px', alignItems: 'center', flexWrap: 'wrap' },
+  link: { color: '#d1d5db', textDecoration: 'none', fontSize: '14px', fontWeight: '500' },
+  user: { color: '#a7f3d0', fontSize: '14px', fontWeight: '500' },
+  btn: { backgroundColor: '#b91c1c', color: 'white', border: '1px solid rgba(255,255,255,0.12)',
+    padding: '8px 14px', borderRadius: '6px', cursor: 'pointer', fontSize: '14px', fontWeight: '600' }
 }
 
 export default Navbar
